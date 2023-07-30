@@ -27,15 +27,17 @@
             </a>
         </div>
         <div class="navbar-links">
+            <div onclick="off()" class="btn"></div>
             <ul>
-                <li onclick=off()><div class="btn"></div></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Work</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#faq">FAQs</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
+    <div id="about" class="head_space"></div>
     <div id="about">
         <div class="profile_cont">
             <div class="profile">
@@ -44,7 +46,7 @@
                     <p>portfolio</p>
                 </div>
                 <div class="desc">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi laboriosam ab accusantium? Ducimus tempora consectetur, delectus autem iusto consequatur dolores quisquam? Harum, accusantium unde neque reiciendis praesentium excepturi animi ex odio totam beatae sapiente necessitatibus sit nihil. Vero enim perferendis libero ut labore blanditiis dolorum magni, dolore natus corrupti nisi?</p>
+                    <p>As a recent engineering graduate and passionate software engineer, I thrive on building life-enhancing products. I'm driven to simplify complexities, create seamless experiences, and constantly evolve in pursuit of excellence.</p>
                     <p class="spaceing">Image from <a href="https://unsplash.com/photos/oU6KZTXhuvk">unsplash</a></p>
                     <img src="assets/arrow.svg" alt="Nothing" class="arrow" />
                 </div>
@@ -54,7 +56,7 @@
             <div class="profile_2nd">
                 <h1>Think</h1>
                 <h2>outside the box.</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam nobis, quaerat praesentium suscipit quae magni quibusdam excepturi quasi nisi nemo rem ad laboriosam voluptates est at, harum optio quis voluptatibus commodi ut officia! Delectus suscipit, eveniet impedit dolorem minima nisi quia molestiae neque! Ducimus perferendis quibusdam quisquam suscipit facilis at labore incidunt adipisci placeat, delectus distinctio error? Nobis eveniet maxime distinctio voluptatibus rem esse quas fugit impedit veritatis odio! Ducimus modi quam voluptas ipsam nemo libero explicabo eos tempore corrupti, maiores maxime nesciunt fugiat distinctio quaerat tenetur deserunt culpa id voluptate possimus? Similique, fuga velit ad aperiam sed totam dicta.</p>
+                <p>With a methodical thought process, I approach challenges as opportunities for growth. My strong problem-solving skills and technical expertise enable me to design innovative solutions. Continuous learning and collaboration empower me to build user-centric products that make a meaningful impact, simplifying lives and inspiring positive change.</p>
                 <button><a>learn more</a></button>
             </div>
         </div>
@@ -64,18 +66,90 @@
         <div class="in_works">
             <p class="my_works">My Works</p>
             <div id="showgrid">
-                  <div class="element"><image class="img_works" src="assets/1.jpg" alt="" /></div>
-                  <div class="element"><image class="img_works" src="assets/2.jpg" alt="" /></div>
-                  <div class="element"><image class="img_works" src="assets/3.jpg" alt="" /></div>
-                  <div class="element"><image class="img_works" src="assets/4.jpg" alt="" /></div>
-                  <div class="element"><image class="img_works" src="assets/5.jpg" alt="" /></div>
-                  <div class="element"><image class="img_works" src="assets/6.jpg" alt="" /></div>
-                  <div class="element"><image class="img_works" src="assets/7.jpg" alt="" /></div>
-                  <div class="element"><image class="img_works" src="assets/8.jpg" alt="" /></div>
-                  <div class="element"><image class="img_works" src="assets/9.jpg" alt="" /></div>
+                <div class="element">
+                    <img class="img_works" src="assets/1.jpg" alt="" />
+                    <div class="hocover">
+                        <h1>Soft Hacks</h1>
+                        <p>Platform to handle SDLC process</p>
+                    </div></div>
+                <div class="element">
+                    <img class="img_works" src="assets/2.jpg" alt="" />
+                    <div class="hocover">
+                        <h1>F3</h1>
+                        <p>Application to keep track of health & tips</p>
+                    </div></div>
+                <div class="element">
+                    <img class="img_works" src="assets/3.jpg" alt="" />
+                    <div class="hocover">
+                        <h1>Connect</h1>
+                        <p>App platform to connect organized labour to work</p>
+                    </div></div>
+                <div class="element">
+                    <img class="img_works" src="assets/4.jpg" alt="" />
+                    <div class="hocover">
+                        <h1>DS & A</h1>
+                        <p>Data structures and algorithms</p>
+                    </div></div>
+                <div class="element">
+                    <img class="img_works" src="assets/5.jpg" alt="" />
+                    <div class="hocover">
+                        <h1>Team Up</h1>
+                        <p>Productive work with collaboration</p>
+                    </div></div>
+                <div class="element">
+                    <img class="img_works" src="assets/6.jpg" alt="" />
+                    <div class="hocover">
+                        <h1>Coding</h1>
+                        <p>Coding skills in python, java, Js</p>
+                    </div></div>
+                <div class="element">
+                    <img class="img_works" src="assets/7.jpg" alt="" />
+                    <div class="hocover">
+                        <h1>UI/UX</h1>
+                        <p>Ui/Ux design skills</p>
+                    </div></div>
+                <div class="element">
+                    <img class="img_works" src="assets/8.jpg" alt="" />
+                    <div class="hocover">
+                        <h1>App Dev</h1>
+                        <p>Mobile applications with Flutter</p>
+                    </div></div>
+                <div class="element">
+                    <img class="img_works" src="assets/9.jpg" alt="" />
+                    <div class="hocover">
+                        <h1>Work</h1>
+                        <p>Description of work</p>
+                    </div></div>
               </div>
               <p class="spaceing">Image from <a href="https://unsplash.com/photos/oU6KZTXhuvk">unsplash</a></p>
+              <div id="faq"></div>
               <button class="self-align"><a>learn more</a></button>
+        </div>
+    
+    </div>
+    <div class="faq_border">
+        <div class="faq">
+            <div class="faq_head">
+                <h1>FAQs</h1>
+            </div>
+            <details>
+                <summary>Do you have experiance in Java?</summary>
+                <div>
+                    I would like to work in Java, But I didn't have exp in it.
+                </div>
+            </details>
+            <details>
+                <summary>What is your Btech project?</summary>
+                <div>
+                    My btech project is related to cnn deep learning with EEG signals
+                </div>
+            </details>
+            <details>
+                <summary>Do you have Hons degree?</summary>
+                <div>
+                    Yeah! I have Btech Hons degree.
+                </div>
+            </details>
         </div>
     </div>
     <div id="contact">
@@ -102,7 +176,12 @@
             </div>
         </div>
     </div>
-    
+    <div class="thanks">
+        <p class="say">"Grateful for your time and interest. Thank you for stopping by!"</p>
+    </div>
+    <div class="signature_block">
+        <p class="sign">Project by <span class="name">Nithin</span></p>
+    </div>
   
 </body>
 </html>
