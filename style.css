@@ -1,0 +1,471 @@
+:root{
+    --blue: #1f203a;
+    --green: #c2ce62;
+
+}
+
+body{
+    font-family: 'PT Sans', sans-serif;
+    /* position: relative; */
+    width:100%;
+    background: var(--blue);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* Nabvar Styling*/
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+  }
+.navbar{
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--blue);
+    color: #ffff;
+    padding: 1rem 5rem;
+}
+.logo img{
+    width: 5rem;
+}
+.navbar-links ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.navbar-links li{
+    list-style: none;
+}
+.navbar-links li a{
+    font-size: 30px;
+    list-style: none;
+    color: #fff;
+    padding: 1rem;
+    display: block;
+}
+.navbar-links li:hover{
+    border-radius: 10px;
+    background: var(--green);
+}
+.navbar-links li:hover a{
+    color: var(--blue);
+}
+.toggle-button{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 30px;
+}
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+nav .btn{
+    /* position: absolute;
+    right: 32px;
+    top: 32px; */
+    display: none;
+    align-self: center;
+    width: 32px;
+    height: 32px;
+}
+
+nav .btn:before, nav .btn:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #fff;
+}
+nav .btn:before {
+    transform: rotate(45deg);
+}
+nav .btn:after {
+    transform: rotate(-45deg);
+}
+
+/* Prifle page 1 Styling */
+.profile_cont{
+    min-height: 100vh;
+}
+.profile{
+    min-height: 60vh;
+    background: var(--green);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 0 100px;
+}
+
+.portfolio{
+    position: relative;
+    bottom: -100px;
+    color: #fff;
+}
+
+.portfolio>img{
+    position: relative;
+    width: 55vh;
+}
+.portfolio>p{
+    position: absolute;
+    bottom: 10px;
+    left: 90px;
+    color: #fff;
+    font-size: 120px;
+    letter-spacing: 8px;
+}
+
+.desc{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    font-size: 24px;
+    line-height: 2;
+    text-align: center;
+    padding: 50px 0px 0px 0px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.spaceing>a{
+    padding-bottom: 2px;
+    border-bottom: 0.5px solid;
+}
+.spaceing{
+    font-size: 16px;
+    letter-spacing: 4px;
+}
+
+.arrow{
+    width: 2rem;
+    height: 5rem;
+}
+
+.profile_center{
+    /* padding: 30vh; */
+    background: var(--blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile_2nd{
+    width: 50vw;
+    align-self: center;
+    color: #fff;
+    /* padding: 200px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    /* flex-wrap: wrap; */
+    gap: 20px;
+}
+
+.profile_2nd>h1{
+    font-size: 120px;
+    letter-spacing: 8px;
+}
+
+.profile_2nd>h2{
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+.profile_2nd>p{
+    font-size: 20px;
+    line-height: 2;
+}
+
+button{
+    background: var(--green);
+    align-self: flex-start;
+    border: none;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+button:hover{
+    background: white;
+    color: black;
+    cursor: pointer;
+}
+.self-align{
+    align-self: center;
+}
+#work{
+    background: var(--blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.in_works{
+    padding: 10vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.my_works{
+    font-size: 120px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    color: #fff;
+    align-self: flex-start;
+}
+.in_works p{
+    padding: 10px 0px 20px;
+    color: #fff;
+}
+#showgrid{
+    padding:  20px 50px;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+.element{
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+.img_works{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.work{
+    width: 100%;
+}
+
+#contact{
+    background: var(--green);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    gap: 30px;
+    height: 50vh;
+    /* min-height: 50vh; */
+    padding: min(50px, 10%);
+}
+.cont_form input, textarea{
+    padding: 5px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #000000;
+    font-size: 20px;
+    outline: none;
+}
+.cont_form input:focus::placeholder{
+    color: black;
+}
+.contact_left{
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+.cont_form{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+}
+.contact_left button{
+    background: var(--green);
+    border: 2px solid #000000;
+    padding: 10px 50px;
+}
+.contact_left button:hover{
+    color: #fff;
+    background-color: #000000;
+    cursor: pointer;
+}
+
+.contact_us{
+    font-size: 48px;
+    color: var(--blue);
+    text-transform: uppercase;
+}
+.phone{
+    font-size: 30px;
+    letter-spacing: 3px;
+    align-self: center;
+}
+.handles{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.icon{
+    width: 30px;
+}
+.contact_right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 100%;
+    width: auto;
+}
+
+@media (max-width:1300px){
+    /* Profile page 1 */
+    .profile{
+        flex-direction: column-reverse;
+        padding: 5px 20%;
+    }
+    .desc{
+        width: 100%;
+    }
+    .portfolio{
+        /* display: contents; */
+        text-align: center;
+    }
+    .portfolio p{
+        font-size: 80px;
+        left: 60px;
+        /* align-self: center; */
+    }
+    .profile_2nd{
+        margin-top: 150px;
+    }
+}
+@media (max-width: 1000px){
+    #contact{
+        flex-direction: column;
+        height: auto;
+    }
+    .contact_left{
+        padding: 50px 0;
+        /* width: 100%; */
+    }
+}
+@media (max-width: 800px){
+    .toggle-button{
+        display: flex;
+        align-self: center;
+    }
+    .navbar-links .btn{
+        display: flex;
+        position: relative;
+        right: 10px;
+        margin: 50px;
+    }
+    .navbar-links{
+        /* width: 100%; */
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 50%;
+        align-self: center;
+        background: var(--blue);
+    }
+    .navbar{
+        position: relative;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        z-index: 999;
+    }
+    .nav-normal{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .navbar-links ul{
+        width: 100%;
+        flex-direction: column;
+    }
+    .navbar-links li{
+        text-align: center;
+    }
+    .active{
+        display: flex;
+    }
+    .navbar-links.inactive{
+        display: none;
+    }
+    .profile{
+        gap: 0;
+    }
+}
+@media (max-width:700px){
+    /* Profile page 1 */
+    .profile{
+        padding: 5px 10%;
+    }
+    .portfolio>img{
+        position: relative;
+        width: 100%;
+    }
+    .portfolio p{
+        font-size: 15vw;
+        left: max(10px, 5%);
+    }
+    .contact_left{
+        width: 80%;
+    }
+    .my_works{
+        font-size: 5rem;
+        align-self: center;
+    }
+}
+@media (max-width:500px){
+    .navbar{
+        padding: 1rem 2rem;
+    }
+    .logo img{
+        width: 4rem;
+    }
+    .profile_center{
+        padding: 0 min(10%, 5rem);
+    }
+    .profile_center h1{
+        font-size: 5rem;
+    }
+    .profile_2nd{
+        width: 100%;
+    }
+    .my_works{
+        font-size: 3rem;
+    }
+}
