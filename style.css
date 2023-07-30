@@ -29,8 +29,8 @@ body{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 2;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 999;
     cursor: pointer;
   }
 .navbar{
@@ -38,15 +38,16 @@ body{
     position: sticky;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 1;
     justify-content: space-between;
     align-items: center;
     background: var(--blue);
     color: #ffff;
-    padding: 1rem 5rem;
+    padding: 1rem 100px;
 }
 .logo img{
-    width: 5rem;
+    width: 50px;
+    height: 50px;
 }
 .navbar-links ul{
     display: flex;
@@ -55,6 +56,7 @@ body{
 }
 .navbar-links li{
     list-style: none;
+    transition: 600ms;
 }
 .navbar-links li a{
     font-size: 30px;
@@ -89,7 +91,6 @@ nav .btn{
     right: 32px;
     top: 32px; */
     display: none;
-    align-self: center;
     width: 32px;
     height: 32px;
 }
@@ -108,7 +109,10 @@ nav .btn:before {
 nav .btn:after {
     transform: rotate(-45deg);
 }
-
+.head_space{
+    position: absolute;
+    top: 0;
+}
 /* Prifle page 1 Styling */
 .profile_cont{
     min-height: 100vh;
@@ -119,7 +123,7 @@ nav .btn:after {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     gap: 50px;
     padding: 0 100px;
@@ -153,7 +157,7 @@ nav .btn:after {
     text-align: center;
     padding: 50px 0px 0px 0px;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     margin-top: 10px;
 }
 .spaceing>a{
@@ -249,7 +253,7 @@ button:hover{
     color: #fff;
 }
 #showgrid{
-    padding:  20px 50px;
+    padding:  20px 0px;
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: repeat(3, 1fr);
@@ -257,11 +261,33 @@ button:hover{
 .element{
     width: 100%;
     aspect-ratio: 1/1;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
 }
 .img_works{
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+.hocover{
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000c5;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    backdrop-filter:blur(5px);
+    transition: 1s;
+}
+.element:hover .hocover{
+    bottom: 0;
 }
 .work{
     width: 100%;
@@ -284,7 +310,7 @@ button:hover{
     background: transparent;
     border: none;
     border-bottom: 2px solid #000000;
-    font-size: 20px;
+    font-size: 16px;
     outline: none;
 }
 .cont_form input:focus::placeholder{
@@ -300,7 +326,7 @@ button:hover{
 .cont_form{
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 1rem;
     width: 100%;
 }
 .contact_left button{
@@ -315,14 +341,15 @@ button:hover{
 }
 
 .contact_us{
-    font-size: 48px;
+    font-size: clamp(36px, 5vw, 48px);
     color: var(--blue);
     text-transform: uppercase;
 }
 .phone{
-    font-size: 30px;
+    font-size: clamp(20px, 5vw, 30px);
     letter-spacing: 3px;
     align-self: center;
+    padding-top: 3rem;
 }
 .handles{
     margin-top: 20px;
@@ -338,16 +365,90 @@ button:hover{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     height: 100%;
     width: auto;
 }
+.signature_block, .thanks{
+    min-height: 10vh;
+    background: #2e2c2c;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.thanks{
+    background: var(--blue);
+}
+.say{
+    text-align: center;
+}
+.name{
+    font-size: 30px;
+}
+.faq, .faq_border{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.faq{
+    border: 1px solid var(--blue);
+    width: 60%;
+    margin: 20px;
+    padding: 20px;
+}
+.faq h1{
+    align-self: flex-start;
+}
+.faq_border{
+    background: var(--green);
+    width: 100%;
+    padding: 20px;
+}
+details{
+background-color: #303030;
+width: 100%;
+color: #fff;
+font-size: clamp(15px, 18px, 20px);
+margin-bottom: 2px;
+}
 
+summary {
+padding: .5em 1.3rem;
+list-style: none;
+display: flex;
+justify-content: space-between;  
+transition: all 1s ease-in-out;
+}
+
+summary::-webkit-details-marker {
+display: none;
+}
+
+summary:after{
+content: "\002B";
+}
+
+details[open] summary {
+    /* border-bottom: 1px solid #aaa; */
+    margin-bottom: .5em;
+}
+
+details[open] summary:after{
+content: "\00D7";
+}
+
+details[open] div{
+padding: .5em 1em;
+transition: all 1s ease-in-out;
+}
+  
 @media (max-width:1300px){
     /* Profile page 1 */
     .profile{
         flex-direction: column-reverse;
-        padding: 5px 20%;
+        /* padding: 5px 20%; */
     }
     .desc{
         width: 100%;
@@ -382,23 +483,31 @@ button:hover{
     }
     .navbar-links .btn{
         display: flex;
+        align-self: flex-end;
         position: relative;
         right: 10px;
         margin: 50px;
     }
     .navbar-links{
-        /* width: 100%; */
-        display: none;
+        transform: scale(0, 1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         position: absolute;
         top: 0;
         left: 0;
-        height: 100vh;
+        height: auto;
+        min-height: 100vh;
         width: 50%;
         align-self: center;
-        background: var(--blue);
+        background: #111111;
+        transition: transform 500ms ease-in-out;
+        transform-origin: left;
+    }
+    .navbar-links li{
+        width: 80%;
     }
     .navbar{
-        position: relative;
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
@@ -412,14 +521,20 @@ button:hover{
         justify-content: space-between;
     }
     .navbar-links ul{
-        width: 100%;
+        width: 80%;
         flex-direction: column;
+        align-items: center;
     }
     .navbar-links li{
+        opacity: 0;
+        transition: opacity 100ms ease-in-out;
         text-align: center;
     }
     .active{
-        display: flex;
+        transform: scale(1, 1);
+    }
+    .active li{
+        opacity: 1;
     }
     .navbar-links.inactive{
         display: none;
@@ -427,6 +542,13 @@ button:hover{
     .profile{
         gap: 0;
     }
+    .faq{
+        width: 80%;
+    }
+    .desc{
+        font-size: clamp(16px, 20px, 24px);
+    }
+
 }
 @media (max-width:700px){
     /* Profile page 1 */
@@ -447,6 +569,9 @@ button:hover{
     .my_works{
         font-size: 5rem;
         align-self: center;
+    }
+    #showgrid{
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 @media (max-width:500px){
